@@ -25,7 +25,7 @@ func main() {
 		}
 		htmlCode := fmt.Sprintf("<h1>OS version is %s\n</h1>",osVersion)
 		// dt := time. Now()
-		// candidateInfo := fmt.Sprintf("<h1>Xendit - Trial - Gaurav Kumar - 12-04-2022 - %s</h1>",dt.Format("01-02-2006"))
+		// candidateInfo := fmt.Sprintf("<h1>12-04-2022 - %s</h1>",dt.Format("01-02-2006"))
 		// htmlCode = htmlCode+candidateInfo
 		// topCmd := "/usr/bin/top -n 1|head -2"
 		// topOut, err := exec.Command("sh","-c",topCmd).Output()
