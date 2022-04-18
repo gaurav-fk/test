@@ -13,7 +13,7 @@ then
 fi
 SERVICE=$1
 TAG=$2
-REPO_PREFIX="556070338223.dkr.ecr.us-east-1.amazonaws.com"
+REPO_PREFIX="556070338223.dkr.ecr.ap-south-1.amazonaws.com"
 
 
 if [[ "$TAG" != v* ]]; then
