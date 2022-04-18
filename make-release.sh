@@ -44,7 +44,7 @@ git add "."
 git commit --allow-empty -m "Release $TAG"
 log "Pushing k8s manifests to ${TAG}..."
 git tag "$TAG"
-git push --set-upstream origin master
+git push --set-upstream origin main
 git push --tags
 
 log "Successfully tagged release $TAG."
