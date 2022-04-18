@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $IMAGE_URI:$IMAGE_TAG microservices-demo/src/adservice
+      - docker build -t $IMAGE_URI:$IMAGE_TAG .
       - docker tag $IMAGE_URI:$IMAGE_TAG $IMAGE_URI:$TAG_NUMBER
   post_build:
     commands:
