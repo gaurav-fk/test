@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+spec:
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      serviceAccountName: default
+      containers:
+        - name: test-app
+          image: 556070338223.dkr.ecr.us-east-1.amazonaws.com/test:v1.1
+          ports:
+          - containerPort: 80
+          readinessProbe:
+            initialDelaySeconds: 10
+            httpGet:
+              path: "/_healthz"
+              port: 80
+
+          livenessProbe:
+            initialDelaySeconds: 10
+            httpGet:
+              path: "/_healthz"
+              port: 80
+          env:
+          - name: PORT
+            value: "80"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-external
+spec:
+  type: LoadBalancer
+  selector:
+    app: test
+  ports:
+  - name: https
+    port: 443
+    targetPort: 80 
+  
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: test
+# spec:
+#   type: ClusterIP
+#   selector:
+#     app: test
+#   ports:
+#   - name: http
+#     port: 80
+#     targetPort: 80
