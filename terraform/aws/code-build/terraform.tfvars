@@ -1,4 +1,4 @@
-buddy_token="7285e48e-8aa9-4450-ab8b-1396607a454c"
+buddy_token=""
 
 domain = "gauravjgec"
 
