@@ -14,7 +14,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: test-app
-          image: 556070338223.dkr.ecr.ap-south-1.amazonaws.com/test:v1.2
+          image: 556070338223.dkr.ecr.ap-south-1.amazonaws.com/test:v1.3
           ports:
           - containerPort: 80
           readinessProbe:
