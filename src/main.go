@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/exec"
 	"net/http"
-	// "time"
+	"time"
 	// "github.com/mackerelio/go-osstat/memory"
 	// "github.com/mackerelio/go-osstat/cpu"
 	"github.com/gorilla/mux"
