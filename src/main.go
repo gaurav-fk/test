@@ -46,6 +46,7 @@ func main() {
 		// memoryCached := int(memory.Cached/1024)
 		// memoryFree := int(memory.Free/1024)
 
+		
 		// memoryUsage := fmt.Sprintf("Memory Usage:</br>Total: %dK, Used: %dK, Cached: %dK, Free: %dk</br>", memoryTotal,memoryUsed,memoryCached,memoryFree)
 
 		// before, err := cpu.Get()
