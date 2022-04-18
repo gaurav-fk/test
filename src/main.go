@@ -24,9 +24,9 @@ func main() {
 			osVersion = "unknown"
 		}
 		htmlCode := fmt.Sprintf("<h1>OS version is %s\n</h1>",osVersion)
-		// dt := time. Now()
-		// candidateInfo := fmt.Sprintf("<h1>Xendit - Trial - Gaurav Kumar - 12-04-2022 - %s</h1>",dt.Format("01-02-2006"))
-		// htmlCode = htmlCode+candidateInfo
+		dt := time. Now()
+		candidateInfo := fmt.Sprintf("<h1>Xendit - Trial - Gaurav Kumar - 12-04-2022 - %s</h1>",dt.Format("01-02-2006"))
+		htmlCode = htmlCode+candidateInfo
 		// topCmd := "/usr/bin/top -n 1|head -2"
 		// topOut, err := exec.Command("sh","-c",topCmd).Output()
 		// cpuMemoryUsage := string(topOut)
@@ -46,7 +46,6 @@ func main() {
 		// memoryCached := int(memory.Cached/1024)
 		// memoryFree := int(memory.Free/1024)
 
-		
 		// memoryUsage := fmt.Sprintf("Memory Usage:</br>Total: %dK, Used: %dK, Cached: %dK, Free: %dk</br>", memoryTotal,memoryUsed,memoryCached,memoryFree)
 
 		// before, err := cpu.Get()
